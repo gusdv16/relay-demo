@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+---
+<Layout title="404 — Página no encontrada | ORIGEN 34°" description="La página que buscás no existe o cambió de lugar.">
+  <main class="nf">
+    <div class="nf__glow" aria-hidden="true"></div>
+    <div class="nf__inner">
+      <p class="eyebrow eyebrow--plain">Fuera del lote</p>
+      <h1 class="nf__code">404</h1>
+      <p class="nf__copy">
+        Esta página no existe o cambió de lugar. Volvé al inicio para conocer el olivar y los
+        formatos disponibles.
+      </p>
+      <a href={base} class="btn btn--gold">Volver al inicio</a>
+    </div>
+  </main>
+</Layout>

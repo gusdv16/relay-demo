@@ -1,0 +1,52 @@
+---
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/cormorant-garamond/latin-300.css';
+import '@fontsource/cormorant-garamond/latin-400.css';
+import '@fontsource/cormorant-garamond/latin-300-italic.css';
+import interUrl from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import serifUrl from '@fontsource/cormorant-garamond/files/cormorant-garamond-latin-300-normal.woff2?url';
+import '../styles/global.css';
+import '../styles/home.css';
+
+const {
+  title = 'ORIGEN 34° — Aceite de oliva extra virgen uruguayo',
+  description = 'Aceite de oliva extra virgen de cosecha temprana, producido en Colonia, Uruguay. Formatos para restaurantes, tiendas gourmet, hoteles y regalos corporativos.',
+} = Astro.props;
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const origin = Astro.site ?? new URL('https://example.com');
+const canonical = new URL(base, origin).href;
+const ogImage = new URL(`${base}og.jpg`, origin).href;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a0c07" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ORIGEN 34°" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" as="font" type="font/woff2" href={interUrl} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={serifUrl} crossorigin />
+  </head>
+  <body>
+    <slot />
+    <div class="grain" aria-hidden="true"></div>
+    <script>
+      import '../scripts/main.js';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,906 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+const title = 'ORIGEN 34° — Aceite de oliva extra virgen uruguayo para negocios';
+const description =
+  'Aceite de oliva extra virgen de cosecha temprana, producido en Colonia, Uruguay. Formatos de 250 ml a 5 L para restaurantes, tiendas gourmet, hoteles y regalos corporativos. Muestras y precios por volumen.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'ORIGEN 34° Aceite de oliva extra virgen',
+  description,
+  brand: { '@type': 'Brand', name: 'ORIGEN 34°' },
+  category: 'Aceite de oliva extra virgen',
+  countryOfOrigin: 'UY',
+  image: 'https://gusdv16.github.io/relay-demo/og.jpg',
+  url: 'https://gusdv16.github.io/relay-demo/',
+  additionalProperty: [
+    { '@type': 'PropertyValue', name: 'Acidez libre', value: '0,15%' },
+    { '@type': 'PropertyValue', name: 'Polifenoles totales', value: '430 mg/kg' },
+    { '@type': 'PropertyValue', name: 'Cosecha', value: '2026 · Lote 07' },
+  ],
+};
+---
+
+<Layout title={title} description={description}>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-bottle" viewBox="0 0 40 90">
+        <path d="M14 3h12v12c0 5.5 6 8.5 6 16.5v50c0 3.6-2.4 5.5-6 5.5H14c-3.6 0-6-1.9-6-5.5v-50C8 23.5 14 20.5 14 15V3Z" fill="none" stroke="currentColor" stroke-width="1.3" />
+        <path d="M14 3h12" stroke="currentColor" stroke-width="1.3" />
+        <rect x="10" y="39" width="20" height="17" fill="none" stroke="currentColor" stroke-width="1" />
+        <path d="M10 64h20" stroke="currentColor" stroke-width="1" opacity=".45" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 16 16">
+        <path d="M2 8.5l3.6 3.6L14 3.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href={base} aria-label="ORIGEN 34°, inicio">
+        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" aria-hidden="true">
+          <circle cx="20" cy="20" r="16.5" stroke-width=".7" opacity=".45" />
+          <path d="M11.5 28.5c6.5-2.2 12.4-8 16.5-17" stroke-width="1.1" />
+          <ellipse cx="16.4" cy="23.3" rx="3.6" ry="1.7" transform="rotate(-38 16.4 23.3)" fill="currentColor" stroke="none" />
+          <ellipse cx="20.4" cy="18.2" rx="3.6" ry="1.7" transform="rotate(-46 20.4 18.2)" fill="currentColor" stroke="none" />
+          <ellipse cx="24.9" cy="13.6" rx="3.2" ry="1.6" transform="rotate(-54 24.9 13.6)" fill="currentColor" stroke="none" />
+          <circle cx="27.6" cy="25.6" r="2.3" fill="currentColor" stroke="none" opacity=".85" />
+        </svg>
+        <span>
+          <span class="brand__name">ORIGEN 34°</span>
+          <span class="brand__sub">Aceite de oliva · Uruguay</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Secciones">
+        <a href="#origen">Origen</a>
+        <a href="#calidad">Calidad</a>
+        <a href="#formatos">Formatos</a>
+        <a href="#negocios">Negocios</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--gold nav__cta" href="#contacto">Solicitar muestras</a>
+        <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Secciones">
+      <a href="#origen"><span>01</span> Origen</a>
+      <a href="#calidad"><span>02</span> Calidad</a>
+      <a href="#formatos"><span>03</span> Formatos</a>
+      <a href="#negocios"><span>04</span> Negocios</a>
+      <a href="#contacto"><span>05</span> Contacto</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a href="mailto:ventas@origen34.uy">ventas@origen34.uy</a>
+      <a href="https://wa.me/59899123456" target="_blank" rel="noopener">+598 99 123 456 · WhatsApp</a>
+      <p>Colonia, Uruguay · 34°28′S</p>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <span class="hero__watermark" aria-hidden="true">34°</span>
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow" data-hero="1">Aceite de oliva extra virgen · Uruguay</p>
+            <h1 class="hero__title">
+              <span class="line"><span class="line-inner" data-hero-line>Aceite de oliva</span></span>
+              <span class="line"><span class="line-inner" data-hero-line><em>extra virgen</em></span></span>
+              <span class="line"><span class="line-inner" data-hero-line>uruguayo.</span></span>
+            </h1>
+            <p class="hero__sub" data-hero="2">
+              De un olivar de Colonia a la mesa de tu negocio. Cosecha temprana, extracción en frío
+              y lotes trazables, en formatos pensados para cocinas, tiendas y regalos corporativos.
+            </p>
+            <div class="hero__actions" data-hero="3">
+              <a class="btn btn--gold" href="#contacto">
+                Solicitar muestras
+                <span class="btn__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn" href="#formatos">Ver formatos</a>
+            </div>
+            <dl class="hero__facts" data-hero="4">
+              <div class="hero__fact">
+                <dt>Cosecha</dt>
+                <dd>2026 · Lote 07</dd>
+              </div>
+              <div class="hero__fact">
+                <dt>Origen</dt>
+                <dd>Colonia, Uruguay</dd>
+              </div>
+              <div class="hero__fact">
+                <dt>Acidez</dt>
+                <dd>0,15% · Extra virgen</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="bottle-stage" id="bottle-stage">
+            <span class="stage-glow" aria-hidden="true"></span>
+            <span class="stage-ring" aria-hidden="true"></span>
+            <span class="stage-floor" aria-hidden="true"></span>
+            <svg class="bottle-fallback" viewBox="0 0 40 90" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M14 3h12v12c0 5.5 6 8.5 6 16.5v50c0 3.6-2.4 5.5-6 5.5H14c-3.6 0-6-1.9-6-5.5v-50C8 23.5 14 20.5 14 15V3Z" stroke-width="1.1" />
+              <rect x="10" y="39" width="20" height="17" stroke-width=".8" />
+            </svg>
+            <canvas id="bottle-canvas" aria-hidden="true"></canvas>
+            <div class="bottle-badge">
+              <span class="bottle-badge__k">Cosecha temprana</span>
+              <span class="bottle-badge__v">Lote 07 · 2026</span>
+              <span class="bottle-badge__m">500 ml · 0,15% acidez</span>
+            </div>
+            <span class="stage-side" aria-hidden="true">Est. 2012 · Colonia, Uruguay</span>
+          </div>
+        </div>
+        <span class="scroll-cue"><i aria-hidden="true"></i> Descubrí el origen</span>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee-track">
+        <div class="marquee__group">
+          <span>Cosecha temprana</span>
+          <span>Extracción en frío</span>
+          <span>Origen Colonia, Uruguay</span>
+          <span>Trazabilidad por lote</span>
+          <span>0,15% acidez libre</span>
+          <span>Producción limitada</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ORIGEN ===== -->
+    <section class="section section--cream" id="origen">
+      <div class="container">
+        <div class="origin__grid">
+          <div class="origin__copy">
+            <p class="eyebrow">01 — Origen</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">Un olivar entre</span></span>
+              <span class="line"><span class="line-inner">el río y el <em>horizonte.</em></span></span>
+            </h2>
+            <p class="lede">
+              Nuestro olivar está en Colonia, sobre suelos calcáreos y con la brisa del Río de la
+              Plata. Pocas hectáreas, rendimiento bajo y una idea simple: que el aceite sepa al
+              lugar donde nace.
+            </p>
+            <p class="lede">
+              No compramos fruta de terceros ni mezclamos cosechas. Cada botella sale de un mismo
+              lote, con su fecha, su análisis y su número de trazabilidad.
+            </p>
+
+            <dl class="stats">
+              <div class="stat">
+                <span class="stat__num">18 <small>ha</small></span>
+                <span class="stat__label">Olivar en producción</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">4</span>
+                <span class="stat__label">Variedades cultivadas</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">1 <small>prensada</small></span>
+                <span class="stat__label">Sin mezclas ni refinado</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">12k</span>
+                <span class="stat__label">Botellas por cosecha</span>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="origin-art" data-parallax>
+            <svg viewBox="0 0 640 720" role="img" aria-label="Ilustración de un olivar al atardecer en Colonia, Uruguay" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1b2415" />
+                  <stop offset="0.5" stop-color="#3d4323" />
+                  <stop offset="1" stop-color="#b08f55" />
+                </linearGradient>
+                <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#f6dda4" stop-opacity=".95" />
+                  <stop offset=".55" stop-color="#dcb470" stop-opacity=".5" />
+                  <stop offset="1" stop-color="#dcb470" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0a0c07" stop-opacity="0" />
+                  <stop offset="1" stop-color="#0a0c07" stop-opacity=".72" />
+                </linearGradient>
+                <g id="tree">
+                  <path d="M0 0v-24" stroke="#232c12" stroke-width="1.5" />
+                  <ellipse cx="0" cy="-28" rx="9" ry="7" fill="#41501f" />
+                  <ellipse cx="-6" cy="-23" rx="6" ry="5" fill="#35421b" />
+                  <ellipse cx="6" cy="-22" rx="6" ry="5" fill="#4a5926" />
+                </g>
+                <g id="tree-fg">
+                  <path d="M0 0v-40" stroke="#0c1106" stroke-width="2.4" />
+                  <ellipse cx="0" cy="-46" rx="16" ry="12" fill="#10170a" />
+                  <ellipse cx="-12" cy="-38" rx="10" ry="8" fill="#0d1307" />
+                  <ellipse cx="12" cy="-36" rx="10" ry="8" fill="#141c0c" />
+                </g>
+              </defs>
+
+              <rect width="640" height="720" fill="url(#sky)" />
+              <circle cx="432" cy="248" r="178" fill="url(#sun)" />
+              <circle cx="432" cy="248" r="50" fill="#f2d99f" opacity=".92" />
+
+              <path d="M0 300q140-44 300-10t340-12v442H0Z" fill="#3b4522" />
+              <path d="M0 356q180-40 340-6t300-14v384H0Z" fill="#2f3919" />
+              <path d="M0 428q160-40 320-8t320-16v316H0Z" fill="#232c12" />
+
+              <ellipse cx="300" cy="420" rx="380" ry="26" fill="#e2ca97" opacity=".07" />
+
+              <g opacity=".55">
+                <use href="#tree" x="28" y="352" transform="scale(1)" />
+                <use href="#tree" x="92" y="348" />
+                <use href="#tree" x="156" y="354" />
+                <use href="#tree" x="220" y="349" />
+                <use href="#tree" x="284" y="353" />
+                <use href="#tree" x="348" y="348" />
+                <use href="#tree" x="412" y="354" />
+                <use href="#tree" x="476" y="349" />
+                <use href="#tree" x="540" y="353" />
+                <use href="#tree" x="604" y="348" />
+              </g>
+
+              <g opacity=".75" transform="translate(0 34)">
+                <use href="#tree" x="46" y="356" transform="scale(1.18)" />
+                <use href="#tree" x="132" y="352" transform="scale(1.18)" />
+                <use href="#tree" x="218" y="357" transform="scale(1.18)" />
+                <use href="#tree" x="304" y="352" transform="scale(1.18)" />
+                <use href="#tree" x="390" y="357" transform="scale(1.18)" />
+                <use href="#tree" x="476" y="351" transform="scale(1.18)" />
+                <use href="#tree" x="562" y="356" transform="scale(1.18)" />
+              </g>
+
+              <path d="M292 720c26-96-14-150 26-216" fill="none" stroke="#a68a52" stroke-width="9" opacity=".26" stroke-linecap="round" />
+
+              <g opacity=".95" transform="translate(0 66)">
+                <use href="#tree" x="6" y="392" transform="scale(1.5)" />
+                <use href="#tree" x="150" y="388" transform="scale(1.5)" />
+                <use href="#tree" x="294" y="393" transform="scale(1.5)" />
+                <use href="#tree" x="438" y="388" transform="scale(1.5)" />
+                <use href="#tree" x="582" y="392" transform="scale(1.5)" />
+              </g>
+
+              <use href="#tree-fg" x="86" y="682" transform="scale(1.65)" />
+              <use href="#tree-fg" x="332" y="704" transform="scale(1.9)" />
+              <use href="#tree-fg" x="556" y="678" transform="scale(1.55)" />
+
+              <rect y="510" width="640" height="210" fill="url(#fade)" />
+            </svg>
+            <figcaption class="origin-art__caption">
+              <span>
+                <b>Finca La Esperanza</b>
+                <small>Colonia · 34°28′S 57°50′W</small>
+              </span>
+              <span>18 ha · 4 variedades</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CALIDAD ===== -->
+    <section class="section" id="calidad">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 — Calidad</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">El análisis</span></span>
+              <span class="line"><span class="line-inner">habla <em>primero.</em></span></span>
+            </h2>
+          </div>
+          <p class="lede">
+            No pedimos que nos creas. Cada lote se analiza en laboratorio y viaja con su ficha
+            técnica: acidez, polifenoles, perfil sensorial y fecha de molienda. Lo que dice el
+            papel es lo que hay en la botella.
+          </p>
+        </div>
+
+        <div class="quality__grid">
+          <div>
+            <div class="specs-grid">
+              <div class="spec">
+                <span class="spec__num"><span data-count="0.15" data-decimals="2">0,15</span><small> %</small></span>
+                <span class="spec__label">Acidez libre</span>
+              </div>
+              <div class="spec">
+                <span class="spec__num"><span data-count="430" data-decimals="0">430</span><small> mg/kg</small></span>
+                <span class="spec__label">Polifenoles totales</span>
+              </div>
+              <div class="spec">
+                <span class="spec__num"><span data-count="78" data-decimals="0">78</span><small> %</small></span>
+                <span class="spec__label">Ácido oleico</span>
+              </div>
+              <div class="spec">
+                <span class="spec__num">&lt; <span data-count="24" data-decimals="0">24</span><small> h</small></span>
+                <span class="spec__label">De cosecha a molienda</span>
+              </div>
+            </div>
+            <p class="quality__note">
+              Valores de la cosecha 2026, lote 07. Los análisis completos están disponibles para
+              clientes mayoristas junto con la ficha técnica del formato.
+            </p>
+          </div>
+
+          <div class="taste-card">
+            <div class="taste-card__head">
+              <h3>Perfil sensorial</h3>
+              <span>Intensidad media-alta</span>
+            </div>
+            <div class="meters">
+              <div class="meter">
+                <span class="meter__label">Frutado verde</span>
+                <span class="meter__track"><span class="meter__fill" data-meter="85"></span></span>
+                <span class="meter__value">85</span>
+              </div>
+              <div class="meter">
+                <span class="meter__label">Amargor</span>
+                <span class="meter__track"><span class="meter__fill" data-meter="62"></span></span>
+                <span class="meter__value">62</span>
+              </div>
+              <div class="meter">
+                <span class="meter__label">Picor</span>
+                <span class="meter__track"><span class="meter__fill" data-meter="78"></span></span>
+                <span class="meter__value">78</span>
+              </div>
+              <div class="meter">
+                <span class="meter__label">Dulzor</span>
+                <span class="meter__track"><span class="meter__fill" data-meter="24"></span></span>
+                <span class="meter__value">24</span>
+              </div>
+            </div>
+            <div class="notes">
+              <span>Alcachofa</span>
+              <span>Hierba recién cortada</span>
+              <span>Almendra verde</span>
+              <span>Pimienta blanca</span>
+            </div>
+          </div>
+        </div>
+
+        <dl class="specs-strip">
+          <div>
+            <dt>Variedades</dt>
+            <dd>Arbequina · Koroneiki</dd>
+          </div>
+          <div>
+            <dt>Cosecha</dt>
+            <dd>Abril – mayo 2026</dd>
+          </div>
+          <div>
+            <dt>Extracción</dt>
+            <dd>En frío, &lt; 24 °C</dd>
+          </div>
+          <div>
+            <dt>Guarda</dt>
+            <dd>Acero inoxidable · atmósfera controlada</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== FORMATOS ===== -->
+    <section class="section section--cream" id="formatos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 — Formatos</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">El formato justo</span></span>
+              <span class="line"><span class="line-inner">para <em>cada mesa.</em></span></span>
+            </h2>
+          </div>
+          <p class="lede">
+            Desde la botella de degustación hasta el bidón de cocina. Todos los formatos salen del
+            mismo lote y se pueden pedir juntos para armar la propuesta de tu local.
+          </p>
+        </div>
+
+        <div class="formats">
+          <article class="format">
+            <div class="format__top">
+              <svg class="format__icon" aria-hidden="true"><use href="#i-bottle" /></svg>
+              <span class="format__badge">Degustación</span>
+            </div>
+            <h3 class="format__name">250 ml</h3>
+            <p class="format__use">Hoteles y ferias</p>
+            <ul class="format__specs">
+              <li>Vidrio oscuro · gotero</li>
+              <li>Caja de 12 unidades</li>
+              <li>Amenities y degustación</li>
+            </ul>
+            <a class="format__link" href="#contacto">Consultar</a>
+          </article>
+
+          <article class="format">
+            <div class="format__top">
+              <svg class="format__icon" aria-hidden="true"><use href="#i-bottle" /></svg>
+              <span class="format__badge">Más pedido</span>
+            </div>
+            <h3 class="format__name">500 ml</h3>
+            <p class="format__use">Tiendas gourmet</p>
+            <ul class="format__specs">
+              <li>Vidrio oscuro · etiqueta premium</li>
+              <li>Caja de 6 unidades</li>
+              <li>Rotación media, buen margen</li>
+            </ul>
+            <a class="format__link" href="#contacto">Consultar</a>
+          </article>
+
+          <article class="format">
+            <div class="format__top">
+              <svg class="format__icon" aria-hidden="true"><use href="#i-bottle" /></svg>
+              <span class="format__badge">Regalo</span>
+            </div>
+            <h3 class="format__name">1 L</h3>
+            <p class="format__use">Mayoristas y regalo</p>
+            <ul class="format__specs">
+              <li>Vidrio oscuro · caja individual</li>
+              <li>Caja de 6 unidades</li>
+              <li>Formato de mesa y exhibición</li>
+            </ul>
+            <a class="format__link" href="#contacto">Consultar</a>
+          </article>
+
+          <article class="format format--feature">
+            <div class="format__top">
+              <svg class="format__icon" aria-hidden="true"><use href="#i-bottle" /></svg>
+              <span class="format__badge">Profesional</span>
+            </div>
+            <h3 class="format__name">5 L</h3>
+            <p class="format__use">Restaurantes y cocinas</p>
+            <ul class="format__specs">
+              <li>Bag in box · grifo</li>
+              <li>Caja de 4 unidades</li>
+              <li>Mejor costo por litro</li>
+            </ul>
+            <a class="format__link" href="#contacto">Consultar</a>
+          </article>
+
+          <article class="format">
+            <div class="format__top">
+              <svg class="format__icon" aria-hidden="true"><use href="#i-bottle" /></svg>
+              <span class="format__badge">Alta rotación</span>
+            </div>
+            <h3 class="format__name">Lata 3 L</h3>
+            <p class="format__use">Cocinas y catering</p>
+            <ul class="format__specs">
+              <li>Hojalata · sellada</li>
+              <li>Caja de 6 unidades</li>
+              <li>Resistente a la luz</li>
+            </ul>
+            <a class="format__link" href="#contacto">Consultar</a>
+          </article>
+
+          <article class="format">
+            <div class="format__top">
+              <svg class="format__icon" aria-hidden="true"><use href="#i-bottle" /></svg>
+              <span class="format__badge">Corporativo</span>
+            </div>
+            <h3 class="format__name">Pack empresa</h3>
+            <p class="format__use">Eventos y fin de año</p>
+            <ul class="format__specs">
+              <li>Botella + estuche de madera</li>
+              <li>Personalizable con tu logo</li>
+              <li>Desde 50 unidades</li>
+            </ul>
+            <a class="format__link" href="#contacto">Consultar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEGOCIOS ===== -->
+    <section class="section" id="negocios">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">04 — Negocios</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">Pensado para</span></span>
+              <span class="line"><span class="line-inner">tu <em>operación.</em></span></span>
+            </h2>
+          </div>
+          <p class="lede">
+            Cada canal tiene su formato, su margen y su forma de contar el producto. Ajustamos la
+            propuesta a lo que necesitás, sin mínimos imposibles ni letra chica.
+          </p>
+        </div>
+
+        <div class="usecases">
+          <article class="usecase">
+            <span class="usecase__num">01</span>
+            <h3>Restaurantes y cafés</h3>
+            <p>Aceite de trabajo y de acabado. El 5 L rinde en cocina; la botella de 500 ml termina la mesa.</p>
+            <ul>
+              <li>Muestras para prueba de cocina</li>
+              <li>Precio por volumen</li>
+            </ul>
+          </article>
+          <article class="usecase">
+            <span class="usecase__num">02</span>
+            <h3>Tiendas gourmet</h3>
+            <p>Un producto de origen con historia, ficha técnica y buena rotación en góndola.</p>
+            <ul>
+              <li>Material de punto de venta</li>
+              <li>Reposición en 72 h</li>
+            </ul>
+          </article>
+          <article class="usecase">
+            <span class="usecase__num">03</span>
+            <h3>Hoteles y turismo</h3>
+            <p>Formato individual para amenities, desayuno buffet y tienda interna del hotel.</p>
+            <ul>
+              <li>Etiqueta con tu marca</li>
+              <li>Entregas programadas</li>
+            </ul>
+          </article>
+          <article class="usecase">
+            <span class="usecase__num">04</span>
+            <h3>Regalo corporativo</h3>
+            <p>Estuches con tu logo para fin de año, eventos y kits de bienvenida.</p>
+            <ul>
+              <li>Desde 50 unidades</li>
+              <li>Armado y envío incluido</li>
+            </ul>
+          </article>
+          <article class="usecase">
+            <span class="usecase__num">05</span>
+            <h3>Distribución</h3>
+            <p>Zona exclusiva, lista mayorista y soporte comercial para vender el origen.</p>
+            <ul>
+              <li>Márgenes por canal</li>
+              <li>Ficha técnica y fotos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESO / ASÍ LO HACEMOS ===== -->
+    <section class="section section--cream process-intro" id="proceso">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">05 — Así lo hacemos</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">Así lo</span></span>
+              <span class="line"><span class="line-inner"><em>hacemos.</em></span></span>
+            </h2>
+          </div>
+          <p class="lede">
+            Seis pasos entre el olivar y tu mesa. Ninguno se puede saltear.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" aria-labelledby="process-heading" data-process>
+      <h2 id="process-heading" class="sr-only">El proceso, paso a paso</h2>
+      <p class="sr-only">
+        Ilustración 3D: una semilla de olivo crece, se cosecha, se muele en la almazara, viaja
+        envasada y termina servida en una mesa.
+      </p>
+
+      <div class="process__track">
+        <div class="process__sticky">
+          <div class="process__scene" aria-hidden="true">
+            <canvas class="process__canvas" data-process-canvas></canvas>
+            <div class="process__veil"></div>
+            <p class="process__hint" data-process-hint>Desplazá para recorrer</p>
+          </div>
+
+          <div class="process__copy">
+            <div class="process__beats">
+              <article class="beat" data-beat="0">
+                <p class="beat__index">01 · Origen</p>
+                <h3 class="beat__title">Todo empieza en un olivo que ya estaba acá.</h3>
+                <p class="beat__text">Colonia, Uruguay. 18 hectáreas, cuatro variedades.</p>
+              </article>
+
+              <article class="beat" data-beat="1">
+                <p class="beat__index">02 · Cultivo</p>
+                <h3 class="beat__title">Lo cuidamos todo el año para cosechar en el momento justo.</h3>
+                <p class="beat__text">A mano, en abril. Antes de que el fruto madure del todo.</p>
+              </article>
+
+              <article class="beat" data-beat="2">
+                <p class="beat__index">03 · Almazara</p>
+                <h3 class="beat__title">Del árbol a la prensa en menos de 24 horas.</h3>
+                <p class="beat__text">Solo presión y frío. Nada más.</p>
+              </article>
+
+              <article class="beat" data-beat="3">
+                <p class="beat__index">04 · Transporte</p>
+                <h3 class="beat__title">Viaja en acero, con su lote y su fecha.</h3>
+                <p class="beat__text">Trazabilidad de principio a fin.</p>
+              </article>
+
+              <article class="beat" data-beat="4">
+                <p class="beat__index">05 · Negocio</p>
+                <h3 class="beat__title">Llega a la góndola y a la cocina.</h3>
+                <p class="beat__text">El mismo aceite que salió del olivar.</p>
+              </article>
+
+              <article class="beat beat--final" data-beat="5">
+                <p class="beat__index">06 · Mesa</p>
+                <h3 class="beat__title">En la mesa se termina de hacer.</h3>
+                <p class="beat__closing">Lo importante es lo de adentro.</p>
+              </article>
+            </div>
+
+            <div class="process__meter" aria-hidden="true">
+              <span class="process__count" data-process-count>01 / 06</span>
+              <div class="process__ticks">
+                <span class="is-active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIOS ===== -->
+    <section class="section" id="clientes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">06 — Clientes</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">Lo que dicen</span></span>
+              <span class="line"><span class="line-inner">las <em>cocinas.</em></span></span>
+            </h2>
+          </div>
+          <p class="lede">
+            Trabajamos con negocios que prueban antes de comprar. Estas son algunas de las
+            devoluciones que recibimos después de la primera caja.
+          </p>
+        </div>
+
+        <div class="quotes">
+          <article class="quote">
+            <blockquote>
+              “Probamos el 5 L en servicio y cambiamos todo el aceite de la cocina. El rendimiento
+              y el sabor nos cerraron por todos lados.”
+            </blockquote>
+            <cite>
+              <b>Martín Casaravilla</b>
+              Chef · Casa Marta, Montevideo
+            </cite>
+          </article>
+          <article class="quote">
+            <blockquote>
+              “Se vende solo. La historia del olivar y la ficha técnica hacen la diferencia en
+              góndola.”
+            </blockquote>
+            <cite>
+              <b>Lucía Ferrari</b>
+              Socia · Almacén del Puerto, Colonia
+            </cite>
+          </article>
+          <article class="quote">
+            <blockquote>
+              “Pedimos estuches con nuestro logo para fin de año. Llegaron a tiempo y con una
+              terminación impecable.”
+            </blockquote>
+            <cite>
+              <b>Andrés Peraza</b>
+              Compras · Estudio Nove, Punta del Este
+            </cite>
+          </article>
+        </div>
+
+        <div class="clients">
+          <span class="clients__label">Trabajan con nosotros</span>
+          <span>Casa Marta</span>
+          <span>Almacén del Puerto</span>
+          <span>Hotel Costa Serena</span>
+          <span>Estudio Nove</span>
+          <span>Mercado del Este</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section section--cream" id="contacto">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__copy">
+            <p class="eyebrow">07 — Contacto</p>
+            <h2 class="sec-title" data-lines>
+              <span class="line"><span class="line-inner">Hablemos de tu</span></span>
+              <span class="line"><span class="line-inner"><em>próximo pedido.</em></span></span>
+            </h2>
+            <p class="lede">
+              Contanos qué tipo de negocio tenés y qué volumen manejás. Te enviamos muestras, lista
+              de precios y ficha técnica del lote vigente.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <svg aria-hidden="true"><use href="#i-check" /></svg>
+                Muestras sin costo para negocios, hasta tres formatos.
+              </li>
+              <li>
+                <svg aria-hidden="true"><use href="#i-check" /></svg>
+                Envíos en 48 h en Montevideo y 72 h al interior.
+              </li>
+              <li>
+                <svg aria-hidden="true"><use href="#i-check" /></svg>
+                Facturación a empresas y condiciones por volumen.
+              </li>
+              <li>
+                <svg aria-hidden="true"><use href="#i-check" /></svg>
+                Etiqueta personalizada desde 50 unidades.
+              </li>
+            </ul>
+
+            <div class="contact-direct">
+              <span class="contact-direct__label">Directo, sin intermediarios</span>
+              <a href="https://wa.me/59899123456?text=Hola%2C%20quiero%20recibir%20muestras%20de%20ORIGEN%2034%C2%B0." target="_blank" rel="noopener">
+                +598 99 123 456
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="mailto:ventas@origen34.uy">
+                ventas@origen34.uy
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3 class="form-card__title">Solicitar muestras</h3>
+            <p class="form-card__sub">Respondemos en menos de 24 horas hábiles.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-nombre">Nombre</label>
+                    <input id="f-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre" />
+                  </div>
+                  <div class="field">
+                    <label for="f-empresa">Empresa o local</label>
+                    <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required placeholder="Nombre del negocio" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-email">Email</label>
+                    <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="vos@empresa.com" />
+                  </div>
+                  <div class="field">
+                    <label for="f-tel">Teléfono</label>
+                    <input id="f-tel" name="telefono" type="tel" autocomplete="tel" placeholder="+598 ..." />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="f-perfil">Tipo de negocio</label>
+                    <select id="f-perfil" name="perfil" required>
+                      <option value="" selected disabled>Elegí una opción</option>
+                      <option>Restaurante o café</option>
+                      <option>Tienda gourmet o dietética</option>
+                      <option>Hotel o turismo</option>
+                      <option>Empresa · regalo corporativo</option>
+                      <option>Distribuidor o mayorista</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="f-volumen">Volumen estimado</label>
+                    <select id="f-volumen" name="volumen">
+                      <option value="" selected>Sin definir</option>
+                      <option>Menos de 50 unidades</option>
+                      <option>50 – 200 unidades</option>
+                      <option>200 – 500 unidades</option>
+                      <option>Más de 500 unidades</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="f-mensaje">Mensaje</label>
+                  <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Contanos qué formatos te interesan o qué necesitás para tu negocio."></textarea>
+                </div>
+              </div>
+
+              <button class="btn btn--gold btn--block" type="submit">
+                Enviar solicitud
+                <span class="btn__arrow" aria-hidden="true">→</span>
+              </button>
+              <p class="form-note">
+                Al enviar se abre tu cliente de correo con los datos de la consulta. También podés
+                escribirnos directo por WhatsApp.
+              </p>
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href={base} aria-label="ORIGEN 34°, inicio">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" aria-hidden="true">
+              <circle cx="20" cy="20" r="16.5" stroke-width=".7" opacity=".45" />
+              <path d="M11.5 28.5c6.5-2.2 12.4-8 16.5-17" stroke-width="1.1" />
+              <ellipse cx="16.4" cy="23.3" rx="3.6" ry="1.7" transform="rotate(-38 16.4 23.3)" fill="currentColor" stroke="none" />
+              <ellipse cx="20.4" cy="18.2" rx="3.6" ry="1.7" transform="rotate(-46 20.4 18.2)" fill="currentColor" stroke="none" />
+              <ellipse cx="24.9" cy="13.6" rx="3.2" ry="1.6" transform="rotate(-54 24.9 13.6)" fill="currentColor" stroke="none" />
+              <circle cx="27.6" cy="25.6" r="2.3" fill="currentColor" stroke="none" opacity=".85" />
+            </svg>
+            <span>
+              <span class="brand__name">ORIGEN 34°</span>
+              <span class="brand__sub">Aceite de oliva · Uruguay</span>
+            </span>
+          </a>
+          <p>
+            Aceite de oliva extra virgen de cosecha temprana. Colonia, Uruguay. Producción limitada
+            para restaurantes, tiendas y empresas.
+          </p>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Explorar</h4>
+            <a href="#origen">Origen</a>
+            <a href="#calidad">Calidad</a>
+            <a href="#formatos">Formatos</a>
+            <a href="#negocios">Negocios</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+          <div class="footer__col">
+            <h4>Contacto</h4>
+            <a href="mailto:ventas@origen34.uy">ventas@origen34.uy</a>
+            <a href="https://wa.me/59899123456" target="_blank" rel="noopener">+598 99 123 456</a>
+            <span>Colonia, Uruguay</span>
+            <span>Lun a vie · 9 a 18 h</span>
+          </div>
+          <div class="footer__col">
+            <h4>Seguir</h4>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#contacto">Pedir catálogo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 ORIGEN 34° · Todos los derechos reservados</span>
+        <span>Marca y casos ficticios · Sitio de demostración</span>
+        <span>Diseño y desarrollo · Gustavo Bentancor</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+</Layout>

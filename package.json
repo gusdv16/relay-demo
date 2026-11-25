@@ -1,0 +1,25 @@
+{
+  "name": "relay-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ORIGEN 34° — landing B2B de aceite de oliva con Astro, Three.js y GSAP.",
+  "author": "Gustavo Bentancor",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "astro": "^5.0.0",
+    "gsap": "^3.15.1",
+    "three": "^0.187.0"
+  }
+}
